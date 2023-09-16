@@ -1,4 +1,4 @@
-const AboutPage = () => {
+const PrivacyPage = () => {
   return (
     <>
       <section className="container my-10">hi</section>
@@ -6,4 +6,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default PrivacyPage;

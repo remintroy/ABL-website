@@ -3,6 +3,11 @@ import HomePage from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AboutPage from "./pages/About";
+import PrivacyPage from "./pages/Privacy";
+import { TermsPage } from "./pages/Terms";
+import PortfolioPage from "./pages/Portfolio";
+import CancelationAndRefundPage from "./pages/CancelAndRefund";
+import { ContactPage } from "./pages/Contact";
 
 const BaseLayout = () => {
   return (
@@ -26,6 +31,26 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <AboutPage />,
+      },
+      {
+        path: "privacy",
+        element: <PrivacyPage />,
+      },
+      {
+        path: "terms",
+        element: <TermsPage />,
+      },
+      {
+        path: "portfolio",
+        element: <PortfolioPage />,
+      },
+      {
+        path: "cancelation_refund",
+        element: <CancelationAndRefundPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
     ],
   },

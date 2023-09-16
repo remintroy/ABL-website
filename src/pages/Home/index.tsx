@@ -1,26 +1,26 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
   return (
     <>
-      {/* <section className="bg-center bg-no-repeat bg-[url('/images/home-banner-01.jpg')] bg-gray-700 bg-blend-multiply">
+      <section className="bg-center bg-no-repeat bg-cover bg-[url('/images/home-banner-02.jpg')] sm:bg-slate-100 bg-blend-multiply">
         <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-            Discover IT Excellence: Your Trusted IT Service Provider
-          </h1>
-          <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-            We transform businesses of most major sectors with powerful and
-            adaptable digital solutions that satisfy the needs of today.
-          </p>
-        </div>
-      </section> */}
-      <section className="bg-center bg-no-repeat sm:bg-[url('/images/home-banner-01.jpg?')] sm:bg-slate-100 bg-blend-multiply">
-        <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
-            Discover IT Excellence: Your Trusted IT Service Provider
+          <h1 className="leading-snug mb-4 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
+            Your{" "}
+            <mark className="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">
+              Trusted
+            </mark>{" "}
+            IT Service Provider
           </h1>
           <p className="text-lg font-normal lg:text-xl sm:px-16 lg:px-48">
             We transform businesses of most major sectors with powerful and
             adaptable digital solutions that satisfy the needs of today.
           </p>
+          <Link to={"/contact"}>
+            <button className="mt-5 inline-flex items-center rounded-md bg-blue-700 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-800">
+              Get started with us
+            </button>
+          </Link>
         </div>
       </section>
       <section className="container my-5 sm:my-14 py-10 px-5 sm:px-10">
@@ -68,6 +68,71 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="container">
+        <h1 className="mb-10 text-3xl font-extrabold text-center leading-none tracking-tight">
+          From our clients
+        </h1>
+        <div className="grid mb-8 border border-gray-200 rounded-lg md:mb-12 md:grid-cols-2">
+          <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r">
+            <blockquote className="max-w-2xl mx-auto mb-4 lg:mb-8 dark:text-gray-400">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Very easy this was to integrate
+              </h3>
+              <p className="my-4">
+                If you care for your time, I hands down would go with this."
+              </p>
+            </blockquote>
+            <figcaption className="flex items-center justify-center space-x-3">
+              <img
+                className="rounded-full w-9 h-9"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+                alt="profile picture"
+              />
+              <div className="space-y-0.5 font-mediumtext-left text-start">
+                <div>Bonnie Green</div>
+                <div className="text-sm text-gray-500">
+                  Developer at Open AI
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+          <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r">
+            <blockquote className="max-w-2xl mx-auto mb-4 lg:mb-8 dark:text-gray-400">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Very easy this was to integrate
+              </h3>
+              <p className="my-4">
+                If you care for your time, I hands down would go with this."
+              </p>
+            </blockquote>
+            <figcaption className="flex items-center justify-center space-x-3">
+              <img
+                className="rounded-full w-9 h-9"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+                alt="profile picture"
+              />
+              <div className="space-y-0.5 font-mediumtext-left text-start">
+                <div>Bonnie Green</div>
+                <div className="text-sm text-gray-500">
+                  Developer at Open AI
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section className="container my-5 sm:my-14 py-10 px-5 sm:px-10">
+        <h1 className="mb-4 text-3xl font-extrabold text-center leading-none tracking-tight">
+          Have questions ?
+        </h1>
+        <Link to={"/contact"} className="flex justify-center">
+          <button className="mt-5 inline-flex items-center rounded-md bg-blue-700 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-800">
+            Get in touch with us
+          </button>
+        </Link>
       </section>
     </>
   );
