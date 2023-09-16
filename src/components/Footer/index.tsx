@@ -7,11 +7,11 @@ const Footer = () => {
       children: [
         {
           title: "Home",
-          to: "/",
+          to: "/#",
         },
         {
           title: "About",
-          to: "/about",
+          to: "/about/#",
         },
       ],
     },
@@ -20,11 +20,11 @@ const Footer = () => {
       children: [
         {
           title: "Contact Us",
-          to: "/contact",
+          to: "/contact/#",
         },
         {
           title: "Privacy",
-          to: "/privacy",
+          to: "/privacy/#",
         },
       ],
     },
@@ -33,15 +33,15 @@ const Footer = () => {
       children: [
         {
           title: "Terms & Conditions",
-          to: "/terms",
+          to: "/terms/#",
         },
         {
           title: "Portfolio",
-          to: "/portfolio",
+          to: "/portfolio/#",
         },
         {
           title: "Cancelation and Refund",
-          to: "/cancelation_refund",
+          to: "/cancelation_refund/#",
         },
       ],
     },
@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
               <img src="/favicon.ico" className="h-8 mr-3" alt="ABL Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap ">
+              <span className="self-center text-2xl font-semibold">
                 ABL Digital Technologies Pvt . LTd
               </span>
             </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
                   <ul className="text-gray-500  font-medium">
                     {titles.children.map((links) => {
                       return (
-                        <li className="mb-4">
+                        <li key={links.title} className="mb-4">
                           <Link to={links.to} className="hover:underline">
                             {links.title}
                           </Link>

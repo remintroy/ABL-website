@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function HomePage() {
+  const works = [
+    {
+      image: "/images/home-banner-01.jpg",
+      title: "Main work",
+    },
+    {
+      image: "/images/home-banner-02.jpg",
+      title: "Second work",
+    },
+  ];
+
   return (
     <>
       <section className="bg-center bg-no-repeat bg-cover bg-[url('/images/home-banner-02.jpg')] sm:bg-slate-100 bg-blend-multiply">
@@ -70,6 +83,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="container my-20">
+        <h1 className="mb-14 text-3xl font-extrabold text-center leading-none tracking-tight">
+          Our works
+        </h1>
+        <div className="flex flex-col md:flex-row gap-10">
+          <Carousel
+            swipeable
+            infiniteLoop
+            className="max-w-3xl"
+            showArrows
+            showThumbs={false}
+          >
+            {works.map((work) => {
+              return (
+                <div>
+                  <img src={work.image} />
+                  {work.title && <p className="legend">{work.title}</p>}
+                </div>
+              );
+            })}
+          </Carousel>
+          <div className="flex justify-center flex-col p-5">
+            <h2 className="mb-5 text-2xl font-extrabold leading-none tracking-tight">
+              Unveiling Digital Excellence: Explore Our Portfolio
+            </h2>
+            Explore a curated selection of our latest projects that reflect our
+            passion for creative web development. With each project, I've aimed
+            to blend cutting-edge design and robust functionality, ensuring an
+            exceptional user experience. From sleek and responsive website
+            designs to custom web applications, each work represents a unique
+            solution tailored to the client's needs. These projects not only
+            demonstrate our technical expertise but also our commitment to
+            delivering results that exceed expectations. Whether you're looking
+            for inspiration or considering collaboration, take a closer look at
+            these examples to see how I can help bring your digital vision to
+            life.
+          </div>
+        </div>
+      </section>
+
       <section className="container">
         <h1 className="mb-10 text-3xl font-extrabold text-center leading-none tracking-tight">
           From our clients
@@ -92,9 +145,7 @@ export default function HomePage() {
               />
               <div className="space-y-0.5 font-mediumtext-left text-start">
                 <div>Bonnie Green</div>
-                <div className="text-sm text-gray-500">
-                  Developer at Open AI
-                </div>
+                <div className="text-sm text-gray-500">Developer at home</div>
               </div>
             </figcaption>
           </figure>
@@ -115,9 +166,7 @@ export default function HomePage() {
               />
               <div className="space-y-0.5 font-mediumtext-left text-start">
                 <div>Bonnie Green</div>
-                <div className="text-sm text-gray-500">
-                  Developer at Open AI
-                </div>
+                <div className="text-sm text-gray-500">Developer at home</div>
               </div>
             </figcaption>
           </figure>
@@ -128,7 +177,7 @@ export default function HomePage() {
         <h1 className="mb-4 text-3xl font-extrabold text-center leading-none tracking-tight">
           Have questions ?
         </h1>
-        <Link to={"/contact"} className="flex justify-center">
+        <Link to={"/contact/#"} className="flex justify-center">
           <button className="mt-5 inline-flex items-center rounded-md bg-blue-700 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-800">
             Get in touch with us
           </button>
