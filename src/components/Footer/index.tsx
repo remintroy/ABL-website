@@ -85,7 +85,7 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="flex items-center justify-center">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © {new Date().getFullYear()}{" "}
             <Link to="/" className="hover:underline">
               ABL Digital Technologies Pvt . LTd
             </Link>
