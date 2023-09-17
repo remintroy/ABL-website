@@ -13,6 +13,10 @@ const Footer = () => {
           title: "About",
           to: "/about/#",
         },
+        {
+          title: "Portfolio",
+          to: "/portfolio/#",
+        },
       ],
     },
     {
@@ -34,10 +38,6 @@ const Footer = () => {
         {
           title: "Terms & Conditions",
           to: "/terms/#",
-        },
-        {
-          title: "Portfolio",
-          to: "/portfolio/#",
         },
         {
           title: "Cancelation and Refund",

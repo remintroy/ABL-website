@@ -8,6 +8,7 @@ import { TermsPage } from "./pages/Terms";
 import PortfolioPage from "./pages/Portfolio";
 import CancelationAndRefundPage from "./pages/CancelAndRefund";
 import { ContactPage } from "./pages/Contact";
+import ErrorPage from "./pages/Error";
 
 const BaseLayout = () => {
   return (
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <BaseLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

@@ -2,7 +2,7 @@ export const ContactPage = () => {
   return (
     <>
       <section className="container my-10 flex flex-col sm:flex-row gap-10 mx:gap-0">
-        <div className="sm:w-1/2 p-4">
+        <div className="hidden sm:block sm:w-1/2 p-4">
           <img
             className="w-full max-w-xl"
             src="/images/banner-03.jpg"
