@@ -97,7 +97,7 @@ export default function HomePage() {
           >
             {works.map((work) => {
               return (
-                <div>
+                <div key={work.title}>
                   <img src={work.image} />
                   {work.title && <p className="legend">{work.title}</p>}
                 </div>

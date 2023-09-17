@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 
 export default function ErrorPage() {
   return (
-    <div className="mx-auto w-full max-w-7xl px-2 md:px-4">
+    <div className="w-full">
       <Navbar />
       <div className="my-20 flex items-center justify-center px-2 md:my-24 md:px-0">
         <div className="flex lg:flex-row flex-col lg:items-center lg:space-x-10">

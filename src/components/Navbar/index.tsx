@@ -90,30 +90,32 @@ const Navbar = () => {
         ></div>
       )}
 
-      <nav
-        className={`transition-all .3s fixed z-40 top-0 left-${
-          showSidebar ? "0" : "[-100%] "
-        } bottom-0 p-7 min-w-[300px] bg-white`}
-      >
-        <div className="flex items-center justify-between">
-          <h3 className="font-bold">PAGES</h3>
-          <div
-            onClick={() => setShowSidbar((pre) => !pre)}
-            className="cursor-pointer select-none inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          >
-            <span className="material-symbols-outlined">close</span>
+      {showSidebar && (
+        <nav
+          className={`transition-all .3s fixed z-40 top-0 left-${
+            showSidebar ? "0" : "[-100%] "
+          } bottom-0 p-7 min-w-[300px] bg-white`}
+        >
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold">PAGES</h3>
+            <div
+              onClick={() => setShowSidbar((pre) => !pre)}
+              className="cursor-pointer select-none inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            >
+              <span className="material-symbols-outlined">close</span>
+            </div>
           </div>
-        </div>
-        <ul className="flex flex-col gap-3 mt-6">
-          {LinkItems.map((e) => {
-            return (
-              <li key={e.title} onClick={() => setShowSidbar(false)}>
-                <LinkButton title={e.title} to={e.to} />
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
+          <ul className="flex flex-col gap-3 mt-6">
+            {LinkItems.map((e) => {
+              return (
+                <li key={e.title} onClick={() => setShowSidbar(false)}>
+                  <LinkButton title={e.title} to={e.to} />
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      )}
     </>
   );
 };
